@@ -13,12 +13,9 @@ const About = () => {
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
           <h1 className="text-2xl font-bold text-white mb-2 leading-tight">
-            Hi, I am
+            Hi, I am  Payal Rattan
           </h1>
-          {/* Name */}
-          <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
-            Payal Rattan
-          </h2>
+         
           {/* Skills Heading with Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight md:whitespace-nowrap">
             <span className="text-white">I am a&nbsp;</span>
