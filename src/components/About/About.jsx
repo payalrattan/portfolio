@@ -17,7 +17,7 @@ const About = () => {
           </h1>
 
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-3xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight md:whitespace-nowrap">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight md:whitespace-nowrap">
             <span className="text-white">I am a&nbsp;</span>
             <ReactTypingEffect
               text={["Fullstack\u00A0Developer"]}

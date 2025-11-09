@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -37,13 +37,16 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-colors duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
+        isScrolled
+          ? "bg-[#050414] bg-opacity-85 backdrop-blur-md shadow-md border-b border-white/5"
+          : "bg-gradient-to-r from-[#050414]/10 to-transparent backdrop-blur-sm"
       }`}
+      style={{ WebkitBackdropFilter: "blur(6px)", backdropFilter: "blur(6px)" }}
     >
       <div className="text-white py-5 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-lg font-semibold cursor-pointer">
+        <div className="text-xl font-semibold cursor-pointer">
           <span className="text-[#8245ec]">&lt;</span>
           <span className="text-white">Payal</span>
           <span className="text-[#8245ec]">/</span>
@@ -52,7 +55,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden md:flex space-x-8 text-gray-300 text-base md:text-lg">
           {menuItems.map((item) => (
             <li
               key={item.id}
@@ -106,7 +109,7 @@ const Navbar = () => {
       {/* Mobile Menu Items */}
       {isOpen && (
         <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300 text-base">
             {menuItems.map((item) => (
               <li
                 key={item.id}

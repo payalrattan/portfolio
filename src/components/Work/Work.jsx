@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { projects } from "../../constants";
 
 const Work = () => {
@@ -96,7 +96,7 @@ const Work = () => {
                   {selectedProject.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1"
+                      className="bg-[#251f38] text-xs font-semibold text-sky-400 rounded-full px-2 py-1"
                     >
                       {tag}
                     </span>
