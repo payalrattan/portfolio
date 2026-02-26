@@ -18,9 +18,9 @@ const Skills = () => (
         <div
           key={category.title}
           className="bg-white backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-gray-300 
-          shadow-[0_0_20px_1px_rgba(37,99,235,0.3)]\"
+          shadow-[0_0_20px_1px_rgba(37,99,235,0.3)]"
         >
-          <h3 className=\"text-2xl sm:text-3xl font-semibold text-[#1f2937] mb-4 text-center\">
+          <h3 className="text-2xl sm:text-3xl font-semibold text-[#1f2937] mb-4 text-center">
             {category.title}
           </h3>
 
