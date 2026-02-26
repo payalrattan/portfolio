@@ -1,6 +1,7 @@
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/profile.jpg";
+import Button from "../Common/Button";
 
 const About = () => {
   return (
@@ -12,51 +13,40 @@ const About = () => {
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
-          <h1 className="text-3xl font-bold text-white mb-2 leading-tight">
+          <h1 className="text-3xl font-bold text-[#1f2937] mb-2 leading-tight">
             Hi, I am Payal Rattan
           </h1>
 
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight md:whitespace-nowrap">
-            <span className="text-white">I am a&nbsp;</span>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#2563eb] leading-tight md:whitespace-nowrap">
+            <span className="text-[#1f2937]">I am a&nbsp;</span>
             <ReactTypingEffect
-              text={["Fullstack\u00A0Developer"]}
+              text={["Fullstack Developer", "Problem Solver", "Code Enthusiast"]}
               speed={100}
               eraseSpeed={50}
               typingDelay={500}
               eraseDelay={2000}
               cursorRenderer={(cursor) => (
-                <span className="text-[#8245ec]">{cursor}</span>
+                <span className="text-[#2563eb]">{cursor}</span>
               )}
             />
           </h3>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            Hi, I’m Payal Rattan. I’m learning and working on web development
-            with a focus on building clean and functional websites. I enjoy
-            working with HTML,CSS, JavaScript, React, Node.js, and MySQL, and I
-            like creating projects that are practical and easy to use. I’m
-            always trying to improve my skills and understand how things work
-            behind the scenes.
+          <p className="text-base sm:text-lg md:text-lg text-[#6b7280] mb-10 mt-8 leading-relaxed">
+            I'm Payal Rattan, a passionate Fullstack Developer crafting responsive, user-friendly web solutions. Specialized in modern JavaScript, React, and Node.js, I transform complex problems into elegant code. When I'm not building, I'm exploring new technologies and best practices to stay ahead of the curve.
           </p>
           {/* Resume Button */}
-          <a
+          <Button 
             href="https://drive.google.com/file/d/1VdRGj2P--i4NteRVuyaHbwJGK1uNnaCP/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
-            style={{
-              background: "linear-gradient(90deg, #8245ec, #a855f7)",
-              boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
-            }}
+            variant="gradient"
           >
             DOWNLOAD CV
-          </a>
+          </Button>
         </div>
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 border-4 border-purple-700 rounded-full"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 border-4 border-blue-500 rounded-full"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}

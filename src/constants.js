@@ -4,13 +4,10 @@ import cssLogo from './assets/tech_logo/css.png';
 import javascriptLogo from './assets/tech_logo/javascript.png';
 import reactjsLogo from './assets/tech_logo/reactjs.png';
 import nextjsLogo from './assets/tech_logo/nextjs.png';
-import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
 import nodejsLogo from './assets/tech_logo/nodejs.png';
 import expressjsLogo from './assets/tech_logo/express.png';
 import mysqlLogo from './assets/tech_logo/mysql.png';
 import mongodbLogo from './assets/tech_logo/mongodb.png';
-import cLogo from './assets/tech_logo/c.png';
-import javaLogo from './assets/tech_logo/java.png';
 import typescriptLogo from './assets/tech_logo/typescript.png';
 import gitLogo from './assets/tech_logo/git.png';
 import githubLogo from './assets/tech_logo/github.png';
@@ -43,7 +40,6 @@ export const SkillsInfo = [
       { name: 'JS', logo: javascriptLogo },
       { name: 'React JS', logo: reactjsLogo },
       { name: 'Next JS', logo: nextjsLogo },
-      { name: '', logo: tailwindcssLogo },
     ],
   },
   {
@@ -86,7 +82,6 @@ export const education = [
     school: "Pujab Technical University",
     date: "Sept 2010- Sept 2011",
     grade: "70.09 %",
-    desc: "",
     degree: "Master of Computer Applications - MCA",
   },
     {
@@ -95,7 +90,6 @@ export const education = [
     school: "Lovely Professional University",
     date: "Aug 2008 - Aug 2010",
     grade: "7.00 CGPA",
-    desc:"",
     degree: "Master of Computer Science - MSc",
   },
     {
@@ -104,34 +98,30 @@ export const education = [
     school: "Savitribai Phule Pune University",
     date: "Sept 2019 - April 2021",
     grade: "9.4 CGPA",
-    desc: "",
     degree: "Bachelor of Education - B.Ed",
   },
   {
-    id: 1,
+    id: 3,
     img: hpu_logo,
     school: "Bachelor of Science ",
     date: "March 2006 - March 2008",
     grade: "50.2%",
-    desc: "",
     degree: "Bachelor of Science - BSC (Computer Science)",
   },
   {
-    id: 2,
+    id: 4,
     img: hp_logo,
     school: "Govt. Sen. Sec School,Sarkaghat",
     date: "June 2003 - Sept 2005",
     grade: "60.05%",
-    desc: "",
     degree: "Himachal Pradesh Board",
   },
   {
-    id: 3,
+    id: 5,
     img: hp_logo,
     school: "Himalayan Public School,Sarkaghat",
     date: "March 2003",
     grade: "72%",
-    desc: "",
     degree: "Himachal Pradesh Board",
   },
 ];

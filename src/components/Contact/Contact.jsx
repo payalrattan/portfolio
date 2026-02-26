@@ -2,6 +2,9 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SectionHeader from "../Common/SectionHeader";
+import FormInput from "../Common/FormInput";
+import Button from "../Common/Button";
 
 const Contact = () => {
   const form = useRef();
@@ -30,7 +33,6 @@ const Contact = () => {
           });
         },
         (error) => {
-          console.error("Error sending message:", error);
           toast.error("Failed to send message. Please try again.", {
             position: "top-right",
             autoClose: 3000,
@@ -52,19 +54,14 @@ const Contact = () => {
       {/* Toast Container */}
       <ToastContainer />
 
-      {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          I’d love to hear from you—reach out for any opportunities or
-          questions!
-        </p>
-      </div>
+      <SectionHeader
+        title="CONTACT"
+        description="I'd love to hear from you—reach out for any opportunities or questions!"
+      />
 
       {/* Contact Form */}
-      <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
-        <h3 className="text-xl font-semibold text-white text-center">
+        <div className="mt-8 w-full max-w-md bg-white p-6 rounded-lg shadow-md border border-gray-300">
+        <h3 className="text-xl font-semibold text-[#1f2937] text-center">
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
 
@@ -73,42 +70,14 @@ const Contact = () => {
           onSubmit={sendEmail}
           className="mt-4 flex flex-col space-y-4"
         >
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Your Email"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
-          />
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Your Name"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-sky-500"
-          />
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-sky-500"
-          />
-          <textarea
-            name="message"
-            placeholder="Message"
-            rows="4"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-sky-500"
-          />
+          <FormInput type="email" name="user_email" placeholder="Your Email" required />
+          <FormInput type="text" name="user_name" placeholder="Your Name" required />
+          <FormInput type="text" name="subject" placeholder="Subject" required />
+          <FormInput type="textarea" name="message" placeholder="Message" rows={4} required />
 
-          {/* Send Button */}
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
-          >
+          <Button type="submit" variant="primary">
             Send
-          </button>
+          </Button>
         </form>
       </div>
     </section>
