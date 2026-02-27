@@ -13,13 +13,13 @@ const About = () => {
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
-          <h1 className="text-3xl font-bold text-[#1f2937] mb-2 leading-tight">
+          <h1 className="text-3xl font-bold font-manrope text-beige mb-2 leading-tight">
             Hi, I am Payal Rattan
           </h1>
 
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#2563eb] leading-tight md:whitespace-nowrap">
-            <span className="text-[#1f2937]">I am a&nbsp;</span>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-olive leading-tight md:whitespace-nowrap">
+            <span className="text-lightOlive">I am a&nbsp;</span>
             <ReactTypingEffect
               text={["Fullstack Developer", "Problem Solver", "Code Enthusiast"]}
               speed={100}
@@ -27,12 +27,12 @@ const About = () => {
               typingDelay={500}
               eraseDelay={2000}
               cursorRenderer={(cursor) => (
-                <span className="text-[#2563eb]">{cursor}</span>
+                <span className="text-olive">{cursor}</span>
               )}
             />
           </h3>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-[#6b7280] mb-10 mt-8 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-lg text-beige mb-10 mt-8 leading-relaxed font-light">
             I'm Payal Rattan, a passionate Fullstack Developer crafting responsive, user-friendly web solutions. Specialized in modern JavaScript, React, and Node.js, I transform complex problems into elegant code. When I'm not building, I'm exploring new technologies and best practices to stay ahead of the curve.
           </p>
           {/* Resume Button */}
@@ -46,7 +46,7 @@ const About = () => {
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 border-4 border-blue-500 rounded-full"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 border-4 border-olive rounded-full"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}

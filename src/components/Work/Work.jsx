@@ -39,18 +39,18 @@ const Work = () => {
       {/* Modal Container */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-hidden relative">
+          <div className="bg-darkGrey rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-hidden relative border border-olive">
             <div className="flex justify-end p-4">
               <button
                 onClick={handleCloseModal}
-                className="text-[#1f2937] text-3xl font-bold hover:text-[#2563eb]"
+                className="text-beige text-3xl font-bold hover:text-olive"
               >
                 &times;
               </button>
             </div>
 
             <div className="flex flex-col">
-              <div className="w-full flex justify-center bg-gray-900 px-4">
+              <div className="w-full flex justify-center bg-[#1B211A] px-4">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
@@ -58,17 +58,17 @@ const Work = () => {
                 />
               </div>
               <div className="lg:p-8 p-6">
-                <h3 className="lg:text-3xl font-bold text-[#1f2937] mb-4 text-md">
+                <h3 className="lg:text-3xl font-bold font-manrope text-beige mb-4 text-md">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-400 mb-6 lg:text-base text-xs">
+                <p className="text-lightOlive mb-6 lg:text-base text-xs font-light">
                   {selectedProject.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedProject.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="bg-blue-50 text-xs font-semibold text-[#2563eb] rounded-full px-2 py-1\"
+                      className="bg-olive-30 text-xs font-semibold text-beige rounded-full px-2 py-1 border border-olive"
                     >
                       {tag}
                     </span>
@@ -79,7 +79,7 @@ const Work = () => {
                     href={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 bg-gray-200 hover:bg-gray-300 text-[#1f2937] lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
+                    className="w-1/2 bg-beige hover:bg-lightOlive text-darkGrey lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center transition-colors"
                   >
                     View Code
                   </a>
@@ -87,7 +87,7 @@ const Work = () => {
                     href={selectedProject.webapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 bg-[#2563eb] hover:bg-blue-700 text-white lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
+                    className="w-1/2 bg-olive hover:bg-darkGrey text-white lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center transition-colors"
                   >
                     View Live
                   </a>

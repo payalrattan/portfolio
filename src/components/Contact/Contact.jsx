@@ -60,8 +60,8 @@ const Contact = () => {
       />
 
       {/* Contact Form */}
-        <div className="mt-8 w-full max-w-md bg-white p-6 rounded-lg shadow-md border border-gray-300">
-        <h3 className="text-xl font-semibold text-[#1f2937] text-center">
+        <div className="mt-8 w-full max-w-md bg-darkGrey p-6 rounded-lg shadow-md border border-olive">
+        <h3 className="text-xl font-semibold font-manrope text-beige text-center">
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
 

@@ -1,5 +1,5 @@
 const FormInput = ({ type = "text", name, placeholder, required = false, rows }) => {
-  const baseClass = "w-full p-3 rounded-md bg-gray-50 text-[#1f2937] border border-gray-300 focus:outline-none focus:border-[#2563eb]";
+  const baseClass = "w-full p-3 rounded-md bg-[#1B211A] text-beige border border-olive focus:outline-none focus:border-lightOlive placeholder-olive-50";
 
   if (type === "textarea") {
     return (

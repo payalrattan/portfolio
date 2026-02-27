@@ -1,9 +1,9 @@
 const SectionHeader = ({ title, description }) => {
   return (
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-[#1f2937]">{title}</h2>
-      <div className="w-32 h-1 bg-[#2563eb] mx-auto mt-4"></div>
-      <p className="text-gray-600 mt-4 text-lg font-semibold">{description}</p>
+      <h2 className="text-4xl font-thin font-manrope tracking-tight text-beige">{title}</h2>
+      <div className="w-32 h-1 bg-olive mx-auto mt-4"></div>
+      <p className="text-lightOlive mt-4 text-base font-light font-sans leading-relaxed">{description}</p>
     </div>
   );
 };
