@@ -12,6 +12,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #1B211A;
+  color: #DED0C3;
+}
+
 @layer utilities {
   .clip-path-custom {
     clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 0 100%);

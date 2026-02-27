@@ -1,11 +1,12 @@
 import { education } from "../../constants";
 import SectionHeader from "../Common/SectionHeader";
+import { textStyles } from '../../config/textStyles';
 
 const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
+      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-[#1B211A] clip-path-custom-3"
     >
       <SectionHeader
         title="EDUCATION"
@@ -15,7 +16,7 @@ const Education = () => {
       {/* Education Timeline */}
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-gray-300 h-full\"></div>
+        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-olive h-full"></div>
 
         {/* Education Entries */}
         {education.map((edu, index) => (

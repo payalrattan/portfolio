@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { textStyles } from '../../config/textStyles';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,28 +40,28 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-colors duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
         isScrolled
-          ? "bg-[#f5f5f5] bg-opacity-85 backdrop-blur-md shadow-md border-b border-gray-300"
-          : "bg-gradient-to-r from-[#f5f5f5]/10 to-transparent backdrop-blur-sm"
+          ? "bg-darkGrey bg-opacity-95 backdrop-blur-md shadow-md border-b border-olive"
+          : "bg-gradient-to-r from-[#1B211A]/50 to-transparent backdrop-blur-sm"
       }`}
       style={{ WebkitBackdropFilter: "blur(6px)", backdropFilter: "blur(6px)" }}
     >
-      <div className="text-[#1f2937] py-5 flex justify-between items-center">
+      <div className="text-beige py-5 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-xl font-semibold cursor-pointer">
-          <span className="text-[#2563eb]">&lt;</span>
-          <span className="text-[#1f2937]">Payal</span>
-          <span className="text-[#2563eb]">/</span>
-          <span className="text-[#1f2937]">Rattan</span>
-          <span className="text-[#2563eb]">&gt;</span>
+        <div className="text-xl font-semibold font-manrope cursor-pointer">
+          <span className="text-olive">&lt;</span>
+          <span className="text-beige">Payal</span>
+          <span className="text-olive">/</span>
+          <span className="text-beige">Rattan</span>
+          <span className="text-olive">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-[#6b7280] text-base md:text-lg">
+        <ul className="hidden md:flex space-x-8 text-lightOlive text-base md:text-lg font-sans">
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#2563eb] ${
-                activeSection === item.id ? "text-[#2563eb]" : ""
+              className={`cursor-pointer hover:text-beige transition-colors ${
+                activeSection === item.id ? "text-beige font-semibold" : ""
               }`}
             >
               <button onClick={() => handleMenuItemClick(item.id)}>
@@ -76,7 +77,7 @@ const Navbar = () => {
             href="https://github.com/payalrattan"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#6b7280] hover:text-[#2563eb]"
+            className="text-lightOlive hover:text-beige transition-colors"
           >
             <FaGithub size={24} />
           </a>
@@ -84,7 +85,7 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/payal-rattan/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#6b7280] hover:text-[#2563eb]"
+            className="text-lightOlive hover:text-beige transition-colors"
           >
             <FaLinkedin size={24} />
           </a>
@@ -94,12 +95,12 @@ const Navbar = () => {
         <div className="md:hidden">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#2563eb] cursor-pointer"
+              className="text-3xl text-olive cursor-pointer"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#2563eb] cursor-pointer"
+              className="text-3xl text-olive cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -108,13 +109,13 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#f5f5f5] bg-opacity-95 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-[#6b7280] text-base">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-darkGrey bg-opacity-95 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden border border-olive">
+          <ul className="flex flex-col items-center space-y-4 py-4 text-lightOlive text-base font-sans">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-[#1f2937] ${
-                  activeSection === item.id ? "text-[#2563eb]" : ""
+                className={`cursor-pointer hover:text-beige transition-colors ${
+                  activeSection === item.id ? "text-beige font-semibold" : ""
                 }`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>
@@ -127,7 +128,7 @@ const Navbar = () => {
                 href="https://github.com/payalrattan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#6b7280] hover:text-[#1f2937]"
+                className="text-lightOlive hover:text-beige transition-colors"
               >
                 <FaGithub size={24} />
               </a>
@@ -135,7 +136,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/payal-rattan/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#6b7280] hover:text-[#1f2937]"
+                className="text-lightOlive hover:text-beige transition-colors"
               >
                 <FaLinkedin size={24} />
               </a>

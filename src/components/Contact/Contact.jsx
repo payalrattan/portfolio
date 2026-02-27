@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import SectionHeader from "../Common/SectionHeader";
 import FormInput from "../Common/FormInput";
 import Button from "../Common/Button";
+import { textStyles } from '../../config/textStyles';
 
 const Contact = () => {
   const form = useRef();
@@ -60,8 +61,8 @@ const Contact = () => {
       />
 
       {/* Contact Form */}
-        <div className="mt-8 w-full max-w-md bg-white p-6 rounded-lg shadow-md border border-gray-300">
-        <h3 className="text-xl font-semibold text-[#1f2937] text-center">
+        <div className="mt-8 w-full max-w-md bg-darkGrey p-6 rounded-lg shadow-md border border-olive">
+        <h3 className={textStyles.heading.h4 + " text-center"}>
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
 

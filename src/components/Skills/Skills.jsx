@@ -1,11 +1,12 @@
 import { SkillsInfo } from "../../constants";
 import Tilt from "react-parallax-tilt";
 import SectionHeader from "../Common/SectionHeader";
+import { textStyles } from '../../config/textStyles';
 
 const Skills = () => (
   <section
     id="skills"
-    className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
+    className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-[#1B211A] clip-path-custom"
   >
     <SectionHeader 
       title="SKILLS" 
@@ -17,10 +18,10 @@ const Skills = () => (
       {SkillsInfo.map((category) => (
         <div
           key={category.title}
-          className="bg-white backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-gray-300 
-          shadow-[0_0_20px_1px_rgba(37,99,235,0.3)]"
+          className="bg-darkGrey backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-olive 
+          shadow-[0_0_20px_1px_rgba(140,136,96,0.3)]"
         >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-[#1f2937] mb-4 text-center">
+          <h3 className={textStyles.heading.h3 + " text-center mb-4"}>
             {category.title}
           </h3>
 
@@ -38,14 +39,14 @@ const Skills = () => (
               {category.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center"
+                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-olive rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center"
                 >
                   <img
                     src={skill.logo}
                     alt={`${skill.name} logo`}
                     className="w-6 h-6 sm:w-8 sm:h-8"
                   />
-                  <span className="text-xs sm:text-sm text-gray-300">
+                  <span className={textStyles.label.default + " text-beige"}>
                     {skill.name}
                   </span>
                 </div>
