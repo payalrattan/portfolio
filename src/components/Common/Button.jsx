@@ -1,5 +1,7 @@
+import { textStyles } from '../../config/textStyles';
+
 const Button = ({ children, href, onClick, type = "button", variant = "primary" }) => {
-  const baseClass = "py-3 px-8 rounded-full font-medium transition duration-300 transform hover:scale-105 w-full";
+  const baseClass = `py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 w-full ${textStyles.button.primary}`;
   
   const variants = {
     primary: "bg-olive hover:bg-darkGrey text-white",

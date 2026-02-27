@@ -3,6 +3,7 @@ import { projects } from "../../constants";
 import SectionHeader from "../Common/SectionHeader";
 import ProjectCard from "../Common/ProjectCard";
 import Button from "../Common/Button";
+import { textStyles } from '../../config/textStyles';
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -58,17 +59,17 @@ const Work = () => {
                 />
               </div>
               <div className="lg:p-8 p-6">
-                <h3 className="lg:text-3xl font-bold font-manrope text-beige mb-4 text-md">
+                <h3 className={textStyles.heading.h2 + " mb-4"}>
                   {selectedProject.title}
                 </h3>
-                <p className="text-lightOlive mb-6 lg:text-base text-xs font-light">
+                <p className={textStyles.body.normal + " mb-6"}>
                   {selectedProject.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedProject.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="bg-olive-30 text-xs font-semibold text-beige rounded-full px-2 py-1 border border-olive"
+                      className={textStyles.label.default + " bg-olive-30 text-beige rounded-full px-2 py-1 border border-olive"}
                     >
                       {tag}
                     </span>

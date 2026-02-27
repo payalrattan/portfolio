@@ -1,6 +1,7 @@
 import { SkillsInfo } from "../../constants";
 import Tilt from "react-parallax-tilt";
 import SectionHeader from "../Common/SectionHeader";
+import { textStyles } from '../../config/textStyles';
 
 const Skills = () => (
   <section
@@ -20,7 +21,7 @@ const Skills = () => (
           className="bg-darkGrey backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-olive 
           shadow-[0_0_20px_1px_rgba(140,136,96,0.3)]"
         >
-          <h3 className="text-2xl sm:text-3xl font-semibold font-manrope text-beige mb-4 text-center">
+          <h3 className={textStyles.heading.h3 + " text-center mb-4"}>
             {category.title}
           </h3>
 
@@ -45,7 +46,7 @@ const Skills = () => (
                     alt={`${skill.name} logo`}
                     className="w-6 h-6 sm:w-8 sm:h-8"
                   />
-                  <span className="text-xs sm:text-sm text-beige">
+                  <span className={textStyles.label.default + " text-beige"}>
                     {skill.name}
                   </span>
                 </div>

@@ -2,6 +2,7 @@ import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/profile.jpg";
 import Button from "../Common/Button";
+import { textStyles } from '../../config/textStyles';
 
 const About = () => {
   return (
@@ -13,12 +14,12 @@ const About = () => {
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
-          <h1 className="text-3xl font-bold font-manrope text-beige mb-2 leading-tight">
+          <h1 className={textStyles.heading.h1 + " text-3xl mb-2"}>
             Hi, I am Payal Rattan
           </h1>
 
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-olive leading-tight md:whitespace-nowrap">
+          <h3 className={textStyles.heading.h3 + " text-xl sm:text-2xl md:text-3xl mb-4 text-olive md:whitespace-nowrap"}>
             <span className="text-lightOlive">I am a&nbsp;</span>
             <ReactTypingEffect
               text={["Fullstack Developer", "Problem Solver", "Code Enthusiast"]}
@@ -32,7 +33,7 @@ const About = () => {
             />
           </h3>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-beige mb-10 mt-8 leading-relaxed font-light">
+          <p className={textStyles.body.large + " mb-10 mt-8"}>
             I'm Payal Rattan, a passionate Fullstack Developer crafting responsive, user-friendly web solutions. Specialized in modern JavaScript, React, and Node.js, I transform complex problems into elegant code. When I'm not building, I'm exploring new technologies and best practices to stay ahead of the curve.
           </p>
           {/* Resume Button */}

@@ -2,6 +2,7 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
+import { textStyles } from '../../config/textStyles';
 
 const Footer = () => {
   // Smooth scroll function
@@ -16,7 +17,7 @@ const Footer = () => {
     <footer className="text-beige py-8 px-[12vw] md:px-[7vw] lg:px-[20vw] bg-[#1B211A] border-t border-olive">
       <div className="container mx-auto text-center">
         {/* Name / Logo */}
-        <h2 className="text-xl font-semibold font-manrope text-lightOlive">Payal Rattan</h2>
+        <h2 className={textStyles.heading.h4 + " text-lightOlive"}>Payal Rattan</h2>
 
         {/* Navigation Links - Responsive */}
         <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
@@ -29,7 +30,7 @@ const Footer = () => {
             <button
               key={index}
               onClick={() => handleScroll(item.id)}
-              className="hover:text-olive transition-colors text-sm sm:text-base my-1 font-sans"
+              className={textStyles.link.default + " my-1"}
             >
               {item.name}
             </button>

@@ -1,4 +1,5 @@
 import Tag from "./Tag";
+import { textStyles } from '../../config/textStyles';
 
 const ProjectCard = ({ project, onClick }) => {
   return (
@@ -14,10 +15,10 @@ const ProjectCard = ({ project, onClick }) => {
         />
       </div>
       <div className="p-6">
-        <h3 className="text-2xl font-bold font-manrope text-beige mb-2">
+        <h3 className={textStyles.heading.h3 + " mb-2"}>
           {project.title}
         </h3>
-        <p className="text-lightOlive mb-4 pt-4 line-clamp-3 font-light">
+        <p className={textStyles.body.normal + " mb-4 pt-4 line-clamp-3"}>
           {project.description}
         </p>
         <div className="mb-4">

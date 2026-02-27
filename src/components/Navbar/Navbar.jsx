@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { textStyles } from '../../config/textStyles';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
