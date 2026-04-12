@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Tag from "./Tag";
 import { textStyles } from '../../config/textStyles';
 
@@ -5,7 +6,7 @@ const ProjectCard = ({ project, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="border border-olive bg-darkGrey backdrop-blur-md rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-olive/50 hover:-translate-y-2 transition-transform duration-300"
+      className="border border-olive/50 bg-gray-900/50 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden cursor-pointer hover:shadow-olive/30 hover:-translate-y-2 transition-all duration-300 hover:border-olive"
     >
       <div className="p-4">
         <img
@@ -15,10 +16,10 @@ const ProjectCard = ({ project, onClick }) => {
         />
       </div>
       <div className="p-6">
-        <h3 className={textStyles.heading.h3 + " mb-2"}>
+        <h3 className={textStyles.heading.h4 + " mb-2 text-olive"}>
           {project.title}
         </h3>
-        <p className={textStyles.body.normal + " mb-4 pt-4 line-clamp-3"}>
+        <p className={textStyles.body.small + " mb-4 pt-4 line-clamp-3 text-lightOlive"}>
           {project.description}
         </p>
         <div className="mb-4">
@@ -29,6 +30,16 @@ const ProjectCard = ({ project, onClick }) => {
       </div>
     </div>
   );
+};
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ProjectCard;

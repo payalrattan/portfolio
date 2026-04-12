@@ -2,7 +2,6 @@ import { useState } from "react";
 import { projects } from "../../constants";
 import SectionHeader from "../Common/SectionHeader";
 import ProjectCard from "../Common/ProjectCard";
-import Button from "../Common/Button";
 import { textStyles } from '../../config/textStyles';
 
 const Work = () => {
@@ -59,10 +58,10 @@ const Work = () => {
                 />
               </div>
               <div className="lg:p-8 p-6">
-                <h3 className={textStyles.heading.h2 + " mb-4"}>
+                <h3 className={textStyles.heading.h3 + " mb-4 text-olive"}>
                   {selectedProject.title}
                 </h3>
-                <p className={textStyles.body.normal + " mb-6"}>
+                <p className={textStyles.body.small + " mb-6 text-lightOlive"}>
                   {selectedProject.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">

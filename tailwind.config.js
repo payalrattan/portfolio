@@ -9,7 +9,14 @@ export default {
       // Brand Colors
       colors: {
         // Core Colors
+        black: '#111',
+        blue: '#1788ae',
+        teal: '#1595b6',
+        white: '#FFFFFF',
         darkGrey: '#343333',
+        lightGrey: '#666',
+
+        // Legacy colors (keeping for compatibility)
         olive: '#8C8860',
         lightOlive: '#C3C186',
         beige: '#DED0C3',

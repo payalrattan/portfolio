@@ -1,24 +1,24 @@
 /**
  * Color Palette Configuration
- * Based on brand guidelines - September 2024
- * 
+ * Updated to match modern portfolio design - April 2026
+ *
  * Core Colors:
- * - Dark Grey: Primary text and headings
- * - Olive: Core brand color
- * - Light Olive: Accent color (80%, 50%, 30% tints)
- * - Beige: Secondary accent color (80%, 50%, 30% tints)
+ * - Black: Primary background
+ * - Blue: Core brand color
+ * - Teal: Accent color
+ * - White: Text color
  */
 
 export const colors = {
   // Core Colors
-  darkGrey: '#343333',
-  olive: '#8C8860',
-  lightOlive: '#C3C186',
-  beige: '#DED0C3',
-  
-  // Neutral Colors
+  black: '#111',
+  blue: '#1788ae',
+  teal: '#1595b6',
   white: '#FFFFFF',
-  black: '#000000',
+
+  // Neutral Colors
+  darkGrey: '#343333',
+  lightGrey: '#666',
   
   // Tints - Light Olive (for backgrounds and accents)
   lightOlive80: 'rgba(195, 193, 134, 0.8)',

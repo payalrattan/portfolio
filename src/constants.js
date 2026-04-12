@@ -26,8 +26,8 @@ import SPPU_logo from './assets/education_logo/SPPU_logo.png';
 
 // Project Section Logo's
 import project1 from './assets/work_logo/project1.jpeg';
-import project2 from './assets/work_logo/project2.jpeg';
-import expenseTracker from './assets/work_logo/expenseTracker.jpeg';
+import project2 from './assets/work_logo/project2.png';
+import hyfbe from './assets/work_logo/hyfbe.jpeg';
 
 
 
@@ -139,22 +139,22 @@ export const projects = [
   },
   {
     id: 1,
-    title: "Meal Share App ",
+    title: "AddSkill App",
     description:
-      "Developed a full-stack web app for browsing and sharing meals. Built REST APIs for meals, reservations, and reviews, and used React hooks for dynamic UI updates with a clean, responsive design.",
+      "A React app for tracking and managing skills dynamically. I focused on clean component structure, dynamic form handling with useState/useEffect, and a responsive design.",
     image: project2,
-    tags: ["React", "Node.js", "Express", "MySQL"],
-    github: " https://github.com/payalrattan/meal-sharing ",
-    webapp: "https://mealsharing-w2lb.onrender.com/",
+    tags: ["React", "CSS"],
+    github: "https://github.com/payalrattan/addskill-app",
+    webapp: "https://addskill.netlify.app/",
   },
   {
     id: 2,
-    title: "Expense Tracker Web Application ",
+    title: "Hack Your Future Belgium Website",
     description:
-      "A React-based web application that provides movie recommendations based on different criteria, such as genres, user preferences, and popular trends. The intuitive design and smooth experience make it a go-to app for movie enthusiasts.",
-    image: expenseTracker,
-    tags: [" Next.js", "React", "Node.js", "Express", "MongoDB", "TypeScript "],
-    github: " https://github.com/payalrattan/expense-Tracker-UI",
-    webapp: "",
+      "A team project built for Hack Your Future Belgium, a non-profit coding school. I contributed end-to-end development including the contact form, newsletter subscription feature, and events section. Built React components on the frontend, REST APIs for backend integration, Spring Boot controllers, and PostgreSQL for data storage. Collaborated with three other developers using Git branches, pull requests, and code reviews on a live production codebase.",
+    image: hyfbe,
+    tags: ["React", "Spring Boot", "PostgreSQL", "Node.js", "Express", "Git"],
+    github: "https://github.com/HackYourFutureBelgium/hyf-website-2026",
+    webapp: "https://hyfbe.be/",
   }
 ];  

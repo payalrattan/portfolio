@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 import { textStyles, textWidths, textAlignment } from "../../config/textStyles";
 
 const TextElement = ({
@@ -28,6 +28,15 @@ const TextElement = ({
       </div>
     </div>
   );
+};
+
+TextElement.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  titleWidth: PropTypes.string,
+  descriptionWidth: PropTypes.string,
+  alignment: PropTypes.string,
 };
 
 export default TextElement;

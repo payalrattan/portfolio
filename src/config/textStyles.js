@@ -1,7 +1,7 @@
 /**
  * Text Styles Configuration
- * Centralized text styling for consistent typography across the application
- * 
+ * Updated for modern portfolio design with better typography
+ *
  * Usage:
  * import { textStyles } from '@/config/textStyles';
  * <h1 className={textStyles.heading.h1}>Title</h1>
@@ -10,25 +10,25 @@
 export const textStyles = {
   // Headings
   heading: {
-    h1: 'text-4xl md:text-5xl lg:text-6xl font-thin font-manrope tracking-tight text-beige',
-    h2: 'text-3xl md:text-4xl lg:text-5xl font-thin font-manrope tracking-tight text-beige',
-    h3: 'text-2xl md:text-3xl lg:text-4xl font-semibold font-manrope text-beige',
-    h4: 'text-xl md:text-2xl font-semibold font-manrope text-beige',
-    h5: 'text-lg md:text-xl font-semibold font-manrope text-beige',
-    h6: 'text-base md:text-lg font-semibold font-manrope text-beige',
+    h1: 'text-4xl md:text-5xl lg:text-6xl font-bold font-["Spartan"] tracking-tight text-white',
+    h2: 'text-3xl md:text-4xl lg:text-5xl font-bold font-["Spartan"] tracking-tight text-white',
+    h3: 'text-2xl md:text-3xl lg:text-4xl font-semibold font-["Spartan"] text-white',
+    h4: 'text-xl md:text-2xl font-semibold font-["Spartan"] text-white',
+    h5: 'text-lg md:text-xl font-semibold font-["Spartan"] text-white',
+    h6: 'text-base md:text-lg font-semibold font-["Spartan"] text-white',
   },
-  
+
   // Body Text
   body: {
-    large: 'text-base md:text-lg leading-relaxed font-light font-sans text-lightOlive',
-    normal: 'text-sm md:text-base leading-relaxed font-light font-sans text-lightOlive',
-    small: 'text-xs md:text-sm leading-relaxed font-light font-sans text-lightOlive',
+    large: 'text-base md:text-lg leading-relaxed font-light font-["Merriweather"] text-white',
+    normal: 'text-sm md:text-base leading-relaxed font-light font-["Merriweather"] text-white',
+    small: 'text-xs md:text-sm leading-relaxed font-light font-["Merriweather"] text-white',
   },
-  
+
   // Section Headers
   section: {
-    title: 'text-4xl font-thin font-manrope tracking-tight text-beige',
-    description: 'text-sm md:text-base leading-relaxed font-light font-sans text-lightOlive',
+    title: 'text-4xl font-bold font-["Spartan"] tracking-tight text-olive',
+    description: 'text-sm md:text-base leading-relaxed font-light font-["Merriweather"] text-white',
   },
   
   // Buttons

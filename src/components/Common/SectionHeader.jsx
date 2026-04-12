@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { textStyles } from '../../config/textStyles';
 
 const SectionHeader = ({ title, description }) => {
@@ -8,6 +9,11 @@ const SectionHeader = ({ title, description }) => {
       <p className={textStyles.section.description + " mt-4"}>{description}</p>
     </div>
   );
+};
+
+SectionHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default SectionHeader;

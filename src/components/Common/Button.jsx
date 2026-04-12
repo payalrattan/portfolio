@@ -1,21 +1,18 @@
-import { textStyles } from '../../config/textStyles';
+import PropTypes from 'prop-types';
 
 const Button = ({ children, href, onClick, type = "button", variant = "primary" }) => {
-  const baseClass = `py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 w-full ${textStyles.button.primary}`;
-  
+  const baseClass = `py-3 px-8 rounded-full transition duration-300 transform hover:scale-110 font-semibold text-sm md:text-base`;
+
   const variants = {
-    primary: "bg-olive hover:bg-darkGrey text-white",
-    secondary: "bg-beige hover:bg-lightOlive text-darkGrey",
-    gradient: "text-white",
+    primary: "bg-olive hover:bg-lightOlive text-white shadow-lg hover:shadow-olive/50",
+    secondary: "bg-transparent border-2 border-olive text-olive hover:bg-olive hover:text-white",
+    gradient: "text-white bg-gradient-to-r from-olive to-lightOlive hover:from-lightOlive hover:to-olive shadow-lg hover:shadow-lightOlive/50",
   };
 
   const buttonClass = `${baseClass} ${variants[variant]}`;
 
-  // Gradient style for primary button with shadow
-  const gradientStyle = variant === "gradient" ? {
-    background: "linear-gradient(90deg, #8C8860, #C3C186)",
-    boxShadow: "0 0 2px #8C8860, 0 0 2px #8C8860, 0 0 40px #8C8860",
-  } : {};
+  // Remove the old gradient style since we're using Tailwind classes now
+  const gradientStyle = {};
 
   if (href) {
     return (
@@ -41,6 +38,14 @@ const Button = ({ children, href, onClick, type = "button", variant = "primary" 
       {children}
     </button>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string,
+  onClick: PropTypes.func,
+  type: PropTypes.string,
+  variant: PropTypes.string,
 };
 
 export default Button;

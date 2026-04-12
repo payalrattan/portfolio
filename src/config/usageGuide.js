@@ -10,13 +10,13 @@
 // ============================================================================
 
 // Import colors
-import { colors } from './config/colors';
+// import { colors } from './config/colors';
 
 // Import text styles, widths, and alignment
-import { textStyles, textWidths, textAlignment } from './config/textStyles';
+// import { textStyles, textWidths, textAlignment } from './config/textStyles';
 
 // Import the TextElement component
-import TextElement from './components/Common/TextElement';
+// import TextElement from './components/Common/TextElement';
 
 
 // ============================================================================

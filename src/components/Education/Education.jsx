@@ -1,6 +1,5 @@
 import { education } from "../../constants";
 import SectionHeader from "../Common/SectionHeader";
-import { textStyles } from '../../config/textStyles';
 
 const Education = () => {
   return (
