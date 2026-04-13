@@ -48,20 +48,7 @@ const Contact = () => {
             theme: "dark",
           });
         }
-      )
-      .catch((error) => {
-        console.error("Form submission error:", error);
-        setIsLoading(false);
-        toast.error("An error occurred. Please try again.", {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          theme: "dark",
-        });
-      });
+      );
   };
 
   return (

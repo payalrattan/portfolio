@@ -11,9 +11,6 @@ const Button = ({ children, href, onClick, type = "button", variant = "primary" 
 
   const buttonClass = `${baseClass} ${variants[variant]}`;
 
-  // Remove the old gradient style since we're using Tailwind classes now
-  const gradientStyle = {};
-
   if (href) {
     return (
       <a
@@ -21,7 +18,6 @@ const Button = ({ children, href, onClick, type = "button", variant = "primary" 
         target="_blank"
         rel="noopener noreferrer"
         className={buttonClass}
-        style={gradientStyle}
       >
         {children}
       </a>
@@ -33,7 +29,6 @@ const Button = ({ children, href, onClick, type = "button", variant = "primary" 
       type={type}
       onClick={onClick}
       className={buttonClass}
-      style={gradientStyle}
     >
       {children}
     </button>

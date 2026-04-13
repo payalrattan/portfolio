@@ -22,7 +22,7 @@ const About = () => {
               <span className="h-2 w-2 rounded-full bg-olive"></span>
               Frontend Developer • React / Node.js
             </span>
-            <h6 className={textStyles.heading.h2 + " text-white leading-tight md:text-[2.2rem] lg:text-[2.5rem]"}>
+            <h6 className={`${textStyles.heading.h2} text-white leading-tight md:text-[2.2rem] lg:text-[2.5rem]`}>
               {`Hi, I'm Payal`}
             </h6>
             <p className="text-base md:text-md text-lightOlive max-w-xl leading-relaxed text-justify">

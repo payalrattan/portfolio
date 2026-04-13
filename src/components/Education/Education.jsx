@@ -41,19 +41,19 @@ const Education = () => {
                     <h3 className="text-xl sm:text-xl font-semibold text-[#1f2937]">
                       {edu.degree}
                     </h3>
-                    <h4 className="text-md sm:text-sm text-gray-700\">
+                    <h4 className="text-md sm:text-sm text-gray-700">
                       {edu.school}
                     </h4>
                   </div>
                   {/* Date at the bottom */}
-                  <p className="text-sm text-gray-600 mt-2\">{edu.date}</p>
+                  <p className="text-sm text-gray-600 mt-2">{edu.date}</p>
                 </div>
               </div>
 
               {/* No logo displayed for entries */}
 
-              <p className="mt-4 text-gray-700 font-bold\">Grade: {edu.grade}</p>
-              <p className="mt-4 text-gray-700\">{edu.desc}</p>
+              <p className="mt-4 text-gray-700 font-bold">Grade: {edu.grade}</p>
+              <p className="mt-4 text-gray-700">{edu.desc}</p>
             </div>
           </div>
         ))}
