@@ -9,11 +9,13 @@ const ProjectCard = ({ project, onClick }) => {
       className="border border-olive/50 bg-gray-900/50 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden cursor-pointer hover:shadow-olive/30 hover:-translate-y-2 transition-all duration-300 hover:border-olive"
     >
       <div className="p-4">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-48 object-cover rounded-xl"
-        />
+        <div className="overflow-hidden rounded-3xl bg-[#111319] shadow-lg border border-olive/20">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-48 object-cover"
+          />
+        </div>
       </div>
       <div className="p-6">
         <h3 className={textStyles.heading.h4 + " mb-2 text-olive"}>

@@ -1,16 +1,14 @@
+import PropTypes from 'prop-types';
 import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
 import { textStyles } from '../../config/textStyles';
 
-const Footer = () => {
-  // Smooth scroll function
-  const handleScroll = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+const Footer = ({ setActiveSection }) => {
+  // Set active section function
+  const handleSectionClick = (sectionId) => {
+    setActiveSection(sectionId);
   };
 
   return (
@@ -24,12 +22,13 @@ const Footer = () => {
           {[
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
-            { name: "Projects", id: "projects" },
+            { name: "Projects", id: "work" },
             { name: "Education", id: "education" },
+            { name: "Contact", id: "contact" },
           ].map((item, index) => (
             <button
               key={index}
-              onClick={() => handleScroll(item.id)}
+              onClick={() => handleSectionClick(item.id)}
               className={textStyles.link.default + " my-1"}
             >
               {item.name}
@@ -68,6 +67,10 @@ const Footer = () => {
       </div>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  setActiveSection: PropTypes.func.isRequired,
 };
 
 export default Footer;

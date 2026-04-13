@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ activeSection, setActiveSection }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Detect scroll and change navbar background
@@ -17,15 +17,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll function
+  // Set active section function
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
     setIsOpen(false);
-
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   const menuItems = [
@@ -33,6 +28,7 @@ const Navbar = () => {
     { id: "skills", label: "Skills" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
@@ -46,7 +42,7 @@ const Navbar = () => {
     >
       <div className="text-white py-5 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-xl font-semibold font-['Spartan'] cursor-pointer">
+        <div className="text-xl font-semibold font-['Spartan'] cursor-pointer" onClick={() => setActiveSection("about")}>
           <span className="text-olive">&lt;</span>
           <span className="text-white">Payal</span>
           <span className="text-olive">/</span>
@@ -145,6 +141,11 @@ const Navbar = () => {
       )}
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  activeSection: PropTypes.string.isRequired,
+  setActiveSection: PropTypes.func.isRequired,
 };
 
 export default Navbar;

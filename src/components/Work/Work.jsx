@@ -50,12 +50,14 @@ const Work = () => {
             </div>
 
             <div className="flex flex-col">
-              <div className="w-full flex justify-center bg-[#1B211A] px-4">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="lg:w-full w-[95%] object-contain rounded-xl shadow-2xl"
-                />
+              <div className="w-full flex justify-center px-4">
+                <div className="overflow-hidden rounded-3xl bg-[#111319] shadow-2xl w-full max-w-4xl border border-olive/20">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
               <div className="lg:p-8 p-6">
                 <h3 className={textStyles.heading.h3 + " mb-4 text-olive"}>

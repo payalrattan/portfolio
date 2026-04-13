@@ -30,13 +30,15 @@ const MatterBackground = () => {
     const balls = Array.from({ length: 35 }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.8,
-      vy: (Math.random() - 0.5) * 0.8,
+      vx: (Math.random() - 0.5) * 2.5,
+      vy: (Math.random() - 0.5) * 2.5,
       r: Math.random() * 8 + 4,
       alpha: Math.random() * 0.3 + 0.15,
     }));
 
     const mouse = { x: width / 2, y: height / 2, active: false };
+    const navbarHeight = 70; // navbar boundary height
+    const repulsionForce = 0.8; // strength of repulsion from navbar
 
     const handlePointerMove = (event) => {
       const rect = container.getBoundingClientRect();
@@ -74,17 +76,31 @@ const MatterBackground = () => {
           const dx = mouse.x - ball.x;
           const dy = mouse.y - ball.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 180) {
-            const force = (180 - dist) / 180;
-            ball.vx += (dx / dist) * 0.03 * force;
-            ball.vy += (dy / dist) * 0.03 * force;
+          if (dist < 300) {
+            const force = (300 - dist) / 300;
+            ball.vx += (dx / dist) * 0.15 * force;
+            ball.vy += (dy / dist) * 0.15 * force;
           }
+        }
+
+        // Navbar collision detection and repulsion
+        if (ball.y - ball.r < navbarHeight) {
+          ball.y = navbarHeight + ball.r;
+          ball.vy = Math.abs(ball.vy) * repulsionForce; // Bounce down with repulsion
         }
 
         ball.x += ball.vx;
         ball.y += ball.vy;
-        ball.vx *= 0.98;
-        ball.vy *= 0.98;
+        ball.vx *= 0.996;
+        ball.vy *= 0.996;
+
+        // Maintain minimum velocity to keep balls moving continuously
+        const speed = Math.sqrt(ball.vx * ball.vx + ball.vy * ball.vy);
+        if (speed < 0.5) {
+          const angle = Math.atan2(ball.vy, ball.vx);
+          ball.vx = Math.cos(angle) * 0.8;
+          ball.vy = Math.sin(angle) * 0.8;
+        }
 
         if (ball.x < -ball.r) ball.x = width + ball.r;
         if (ball.x > width + ball.r) ball.x = -ball.r;
